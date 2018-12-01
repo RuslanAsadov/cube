@@ -36,7 +36,7 @@ $(function() {
 
 	$('.mm-listitem').click(function() {
 		slowScroll($(this).find('a').attr('href'));
-		// api.close();
+		api.close();
 	});
 
 //close mmenu
