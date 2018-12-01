@@ -1,0 +1,160 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.blocks-item .header-item__title
+		font-size: 25px
+
+	.blocks-item .header-bottom-line
+		flex-direction: column
+
+	.socials
+		margin-bottom: 5px
+
+	.status-items .status-items__item
+		width: 155px
+
+// ≥992px
++media-breakpoint-down(md)
+	.blocks-item
+		justify-content: center
+
+	.blocks-item_content1
+		margin-right: 0
+	
+	.blocks-item_content2
+		margin-left: 0
+
+	.blocks-item .header-item__title
+		font-size: 20px
+	
+	.items-composition
+		flex-direction: column
+
+	.offset-section
+		padding: 100px 0
+
+	.section-heading_wrap
+		margin-bottom: 100px
+	
+	.section-team
+		flex-direction: column
+		.team-block:not(:last-child)
+			border-bottom: 1px solid #000
+
+	.section-process
+		.container
+			display: flex
+			flex-direction: column
+			align-items: center
+			.composition-line
+				margin-bottom: 15px
+
+	.status-items
+		width: 690px
+		.status-items__item
+			margin: 20px 0
+			width: 175px
+
+	.blog-items
+		.blog-item
+			width: 100% !important
+			.blog-item_wrapper
+				margin: 0
+
+// ≥768px
++media-breakpoint-down(sm)
+	.section-two-blocks
+		flex-direction: column
+		height: 100%
+	
+	.blocks-item
+		min-height: 100%
+	
+	.composition-line
+		flex-direction: column
+		margin: 0
+		.about-composition__item
+			margin: 15px 0
+	
+	.section-process
+		.container
+			display: flex
+			flex-direction: column
+			align-items: center
+			.composition-line
+				margin: 0
+				.process-composition__item
+					margin: 15px 0
+	
+	.section-team
+		.team-block
+			flex-direction: column
+		.team__item:not(:last-child)
+			border-bottom: 1px solid #000
+
+	.portfolio-category
+		flex-direction: column
+		align-items: center
+		li
+			margin: 5px 0
+			&:not(:last-child) 
+				&:after
+					display: none
+
+	.grid-item
+		min-width: 50vw
+
+	.status-items
+		width: 510px
+		.status-items__item
+			margin: 20px 0
+			width: 170px
+	
+	.twitter-cnt
+		padding: 0
+
+	.footer-start
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		.footer-start-left
+			margin-bottom: 20px
+			.heading-footer
+				margin-top: 10px
+
+// ≥576px
++media-breakpoint-down(xs)
+	.offset-section
+		padding: 80px 0
+
+	.grid-item
+		min-width: 100vw
+
+	.section-heading_wrap
+		margin-bottom: 80px
+
+	.status-items
+		width: 100%
+		.status-items__item
+			margin: 20px 0
+			width: 145px
+			.status-item_text
+				margin-top: 30px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

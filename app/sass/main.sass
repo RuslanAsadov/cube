@@ -1,0 +1,786 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	color: $text
+	overflow: scroll
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+img
+	pointer-events: none
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.button
+	display: inline-block
+	border: 1px solid #9A977A
+	color: #fff
+	text-decoration: none
+	background-color: #C9C3B3
+	padding: 12px 45px
+	font-size: 14px
+	text-transform: uppercase
+	letter-spacing: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&:hover
+		background-color: lighten(#C9C3B3, 5%)
+		color: #ffffff
+		text-decoration: none
+	&:active
+		background-color: darken(#C9C3B3, 5%)
+	&:focus
+		outline: none
+
+a:focus, button:focus, input:focus
+	outline: none
+	box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.13)
+
+
+.offset-section
+	padding: 175px 0
+	width: 100vw
+
+.section-two-blocks
+	max-width: 100vw
+	height: 500px
+	display: flex
+	flex: 1
+	position: relative
+
+.my-hamburger
+	display: block
+	height: 80px
+	width: 80px
+	position: absolute
+	left: 2%
+	top: 2%
+	z-index: 10
+	.ham
+		.line
+			stroke: $accent
+
+.before-preloader
+	overflow: hidden
+	position: fixed
+	height: 100vh
+	width: 100%
+
+#loader-cnt
+	z-index: 100
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: $accent
+	
+	
+.load
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 100px
+	height: 100px
+	z-index: 10
+
+.load hr
+	border: 0
+	margin: 0
+	width: 40%
+	height: 40%
+	position: absolute
+	border-radius: 50%
+	animation: spin 2s ease infinite
+	z-index: 100
+
+.load :first-child
+	background: #19A68C
+	animation-delay: -1.5s
+.load :nth-child(2)
+	background: #F63D3A
+	animation-delay: -1s
+.load :nth-child(3)
+	background: #FDA543
+	animation-delay: -0.5s
+.load :last-child
+	background: #193B48
+
+@keyframes spin
+	0%, 100%
+		transform: translate(0)
+	25%
+		transform: translate(160%)
+	50%
+		transform: translate(160%, 160%)
+	75%
+		transform: translate(0, 160%)
+
+	
+
+//
+
+
+.mm-navbar__title
+	padding: 0
+
+.mm-navbar__mytitle
+	font-size: 20px
+	font-family: oswald-reglar, sans-serif
+
+.mm-panel, .mm-panels, .mm-navbar
+	background: $accent
+
+.mm-menu a, .mm-menu a:active, .mm-menu a:hover, .mm-menu a:link, .mm-menu a:visited
+	color: #000000
+
+.mm-listitem__text
+	font-size: 18px
+
+.mm-listitem:after
+	right: 20px
+
+.mm-listitem:focus
+	box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.13)
+//
+
+.header-item, .blocks-item
+	height: 100%
+	width: 100%
+	display: flex
+	align-items: center
+	padding: 0 5%
+	padding-top: 100px
+	.header-item__logo
+		display: block
+		width: 87px
+		height: auto
+	.header-item__title
+		font-size: 30px
+		line-height: 35px
+		font-family: oswald-reglar, sans-serif
+		color: $accent
+		text-transform: uppercase
+		letter-spacing: 2px
+		margin-bottom: 25%
+	.header-bottom-line
+		width: 100%
+		height: 20px
+		display: flex
+		justify-content: space-between
+.socials
+	a
+		color: $accent
+		&:hover
+			color: darken($accent, 5%)
+
+.blocks-item-left
+	background-color: $accent2
+	padding-bottom: 100px
+	justify-content: flex-end
+
+.socials
+	a
+		text-decoration: none
+		.fa
+			font-size: 18px
+			margin: 0 6px
+
+.header-contact .fa
+	color: $accent
+	margin: 0 6px
+	&:hover
+		color: darken($accent, 5%)
+
+.header-contact
+	.phone
+		font-family: lekton-regular, sans-serif
+		font-size: 18px
+		text-decoration: none
+		color: $accent
+		&:hover
+			color: darken($accent, 5%)
+
+.blocks-item_content2
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-left: 7%
+
+.blocks-item_content1
+	margin-right: 7%
+
+
+.blocks-item-right
+	background-color: $accent3
+	align-items: flex-end
+	.right-cnt
+		text-transform: uppercase
+		display: flex
+		flex-direction: column
+		font-family: lekton-regular, sans-serif
+		margin-bottom: 25px
+		.latest
+			font-size: 16px
+			color: #848484
+		.latest-item
+			color: #fff
+			font-size: 16px
+			text-align: left
+			line-height: 18px
+			.latest-item__category
+				color: #fdeecf
+
+
+.section-heading_wrap
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-bottom: 170px
+	.section-heading
+		text-align: center
+		max-width: 810px
+		font-family: oswald-light, sans-serif
+		letter-spacing: 1px
+		.section-title
+			text-transform: uppercase
+			font-size: 30px
+			line-height: 30px
+			margin-bottom: 38px
+			font-weight: normal
+		.section-description
+			font-size: 16px
+			line-height: 20px
+			margin: 0
+			font-family: lekton-regular, sans-serif
+
+
+//section about
+
+.items-composition
+	display: flex
+	
+.composition-line
+	display: flex
+
+
+.about-composition__item
+	margin: 15px
+
+.about-composition__item-title
+	text-transform: uppercase
+	font-size: 14px
+	margin: 0
+	font-family: lekton-bold, sans-serif
+	font-weight: bold
+	position: relative
+	margin-left: 10px
+	white-space: nowrap
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 5px
+		height: 15px
+		background: $accent
+		top: 50%
+		left: -10px
+		transform: translate(0, -50%)
+
+.about-composition__item-text
+	font-size: 14px
+	margin: 0
+	margin-top: 5px
+	line-height: 20px
+
+//people-about
+
+.section-team
+	width: 100vw
+	display: flex
+	justify-content: space-between
+	height: 100%
+	.team-block
+		display: flex
+		width: 100%
+		height: 100%
+		justify-content: center
+		.team__item
+			padding: 280px 5% 10% 5%
+			display: flex
+			flex-direction: column
+			height: 500px
+			width: 100%
+			.socials
+				a
+					color: #000
+					.fa
+						margin: 0 3px
+					&:hover
+						// color: #fafafa
+			.team-name
+				font-family: lekton-bold, sans-serif
+				font-weight: bold
+				color: $accent
+				text-transform: uppercase
+				font-size: 30px
+				line-height: 30px
+			.team-ship
+				font-size: 14px
+				font-family: lekton-bold, sans-serif
+				font-weight: bold
+				color: #000
+				text-transform: uppercase
+				line-height: 14px
+				margin: 3px 0
+			.team-text
+				font-size: 14px
+				line-height: 16px
+				margin: 0
+				margin-bottom: 5px
+				color: #000
+				max-width: 255px
+
+		.team__item1
+			align-items: flex-start
+			text-align: left
+		.team__item2
+			align-items: flex-end
+			text-align: right
+
+//section process
+
+.section-process
+	background-color: #F7F7F7
+	.process-composition__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		margin: 0 10px
+		.process-icon
+			height: 80px
+			width: 80px
+			border-radius: 50%
+			border: 2px solid $accent
+			display: flex
+			align-items: center
+			justify-content: center
+			transition: all .20s ease
+			.fa
+				color: $accent
+				font-size: 36px
+		.process-title
+			text-transform: uppercase
+			font-family: lekton-bold, sans-serif
+			font-weight: bold
+			margin: 15px 0 5px 0
+		.procces-text
+			max-width: 255px
+			font-size: 14px
+			line-height: 18px
+			margin: 0
+		&:hover
+			.process-icon
+				background: $accent
+				.fa
+					color: #fff
+
+//section-portfolio
+.section-portfolio
+	width: 100vw
+	.section-heading_wrap
+		margin: 0
+
+.portfolio-category
+	display: flex
+	justify-content: center
+	margin-bottom: 80px
+	padding: 0
+	li
+		list-style: none
+		cursor: pointer
+		font-family: lekton-regular, sans-srif
+		font-size: 16px
+		white-space: nowrap
+		margin: 0 30px
+		position: relative
+		text-transform: uppercase
+		&:not(:last-child) 
+			&:after
+				content: "|"
+				display: block
+				position: absolute
+				top: 50%
+				transform: translate(0, -50%)
+				right: -30px
+
+.portfolio-grid
+	width: 100%
+
+.item-h1
+	height: 500px
+
+.item-h2
+	height: 250px
+
+.addtext
+	outline: none
+	background-color: transparent
+	border: none
+	text-transform: uppercase
+	font-size: 30px
+	line-height: 30px
+	display: flex
+	justify-content: center
+	margin: 0 auto
+	margin-top: 90px
+	color: #000
+	text-decoration: none
+	cursor: pointer
+	position: relative
+	font-family: oswald-light, sans-serif
+	&:hover, &:focus, &:active
+		color: #000
+		outline: none
+		text-decoration: none
+	&:hover
+		text-decoration: underline
+
+.c1
+	background: #F54759
+.c2
+	background: #DFDFD7
+.c3
+	background: #D6F0ED
+.c4
+	background: #E6E6E6
+.c5
+	background: #E3DBD1
+.c6
+	background: #513C4B
+.c7
+	background: #EAE6CA
+.c8
+	background: #DCCBBF
+.c9
+	background: #329783
+
+.grid-item
+	min-width: 33.34vw
+	position: relative
+	.grid-overlay
+		opacity: 0
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		transition: all .20s ease
+		background-color: $accent2
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		.text-ovelay
+			font-size: 14px
+			font-family: lekton-regular, sans-serif
+			text-transform: uppercase
+			color: $accent
+			line-height: 20px
+			.overlay-cnt
+				color: #000
+		.btn-portfolio
+			margin-top: 45px
+			background-color: $accent2
+			text-decoration: none
+			color: $accent
+			&:hover
+				background-color: lighten($accent2, 5%)
+	&:hover
+		.grid-overlay
+			opacity: 1
+
+//section status
+
+.section-small
+	background-color: #F3F2F2
+	padding: 120px 0
+
+.small-heading
+	text-align: center
+	margin-bottom: 70px
+	span
+		color: $accent
+		text-transform: uppercase
+		font-size: 30px
+		line-height: 30px
+		font-family: oswald-light, sans-serif
+
+
+.status-items
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+	width: 100%
+	margin: 0 auto
+	.status-items__item
+		width: 185px
+		display: flex
+		flex-direction: column
+		align-items: center
+		.status-item_text
+			text-transform: uppercase
+			color: $accent
+			font-family: oswald-light, sans-serif
+			font-size: 16px
+			margin-top: 45px
+
+//section blog
+
+.section-blog
+	.section-heading_wrap
+		margin-bottom: 70px
+
+.blog-items
+	.sizer
+		width: 25%
+	.blog-item
+		width: 25%
+		padding-top: 15px
+		.blog-item_wrapper
+			margin: 0 15px
+			padding-bottom: 30px
+			position: relative
+			height: 100%
+			.blog-item_img
+				width: 100%
+				height: 200px
+				img
+					display: block
+					max-width: 100%
+					height: auto
+			.blog-item_title
+				font-family: lekton-bold, sans-serif
+				font-weight: bold
+				text-transform: uppercase
+				font-size: 16px
+				line-height: 20px
+				margin: 26px 0
+			.blog-item_text
+				font-family: lekton-regular, sans-serif
+				font-size: 14px
+				line-height: 18px
+			.blog-item_line
+				display: flex
+				justify-content: space-between
+				font-size: 14px
+				font-family: lekton-regular, sans-serif
+				position: absolute
+				bottom: 0
+				width: 100%
+				.blog-item_author
+					color: $accent
+					&:hover
+						color: $accent
+					strong
+						text-transform: uppercase
+						font-family: lekton-bold, sans-serif
+				.blogitem_read-more
+					color: #fe0000
+				&:hover
+					color: #fe0000
+	.blog-item_type1
+		width: 50%
+		.blog-item_img
+			background: #F3F2F2
+	.blog-item_type2
+		width: 25%
+		.blog-item_img
+			background: #8DDBCB
+
+//clients
+
+.clients-item
+	max-width: 160px
+	max-height: 110px
+	margin: 0 10px
+
+.section-clients
+	.owl-theme
+		.owl-dots .owl-dot
+				span
+					height: 14px
+					width: 14px
+					background: #97C2BE
+	.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+		background: $accent
+
+.owl-theme .owl-nav.disabled+.owl-dots
+	margin-top: 30px
+
+//twitter
+
+.twitter-cnt
+	padding: 0 22%
+	.twitter-logo
+		width: 24px
+		height: 24px
+		margin: 0 auto
+		margin-bottom: 40px
+		.fa
+			font-size: 25px
+			color: #60d4d4
+	.twitter-text
+		font-family: lekton-italic, sans-serif
+		font-size: 24px
+		line-height: 26px
+		margin-bottom: 10px
+		text-align: center
+		a
+			color: #60d4d4
+			&:hover
+				color: #60d4d4
+	.twitter-time
+		text-align: left
+		font-family: lekton-bold, sans-serif
+		color: #f48258
+		display: flex
+		align-items: center
+		&:before, &:after
+			display: block
+			content: ''
+			height: 1px
+			background-color: $accent3
+			transform: translate(0, -50%)
+			margin: 0 10px
+		&:before
+			width: 5%
+		&:after
+			width: 25%
+
+//footer
+
+.section-footer
+	.blocks-item-left
+		background: $accent3
+	.blocks-item-right
+		background: $accent2
+		justify-content: center
+		align-items: center
+		.blocks-item_content
+			width: 100%
+			margin: 0
+			padding-bottom: 5%
+			.socials
+				padding: 60px 0
+
+.footer-name
+	font-size: 24px
+	color: #646250
+	text-transform: uppercase
+	font-family: lekton-regular, sans-serif
+	font-weight: normal
+
+.footer-text
+	font-size: 12px
+	color: #646250
+	text-transform: uppercase
+	font-family: lekton-regular, sans-serif
+
+.footer-form
+	display: flex
+	flex-direction: column
+	align-items: center
+	.footer-input
+		border: 0
+		border-bottom: 1px solid #646250
+		background: transparent
+		margin-bottom: 25px
+		width: 100%
+		padding: 5px 0
+	.button
+		margin-top: 25px
+		width: 130px
+
+.footer-start
+	display: flex
+	width: 100%
+	justify-content: space-around
+	.footer-start-left
+		img
+			display: block
+			width: 87px
+			height: auto
+		.heading-footer
+			font-size: 30px
+			line-height: 35px
+			font-family: oswald-reglar, sans-serif
+			color: $accent
+			text-transform: uppercase
+			letter-spacing: 2px
+			font-weight: normal
+	.footer-start-right
+		.footer-adress
+			font-size: 14px
+			color: #333
+			text-transform: uppercase
+			line-height: 16px
+			margin-bottom: 5px
+		.footer-contact-line
+			display: flex
+			flex-direction: column
+			text-transform: uppercase
+			font-size: 16px
+			line-height: 19px
+			.contact-phone
+				color: #333
+			.contact-email
+				color: $accent
+
+.footer-line
+	color: #000
+	display: flex
+	flex-direction: column
+	.fa
+		font-size: 14px
+		color: #000
+
+@import "media" // Always at the end
