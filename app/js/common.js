@@ -1,8 +1,16 @@
-document.body.onload = function() {
-	setTimeout(function() {
-		$('#loader-cnt').fadeOut('slow');
-	}, 2000);
-}
+//start scrolltop
+$(window).scroll(function() {
+	if ($(this).scrollTop() > $(this).height()) {
+		$('.scrolltop').addClass('active');
+	} else {
+		$('.scrolltop').removeClass('active');
+	}
+});
+$('.scrolltop').click(function() {
+	$('html, body').animate({scrollTop: 0}, 'slow', 'swing');
+});
+//close scrolltop
+
 //start mmenu
 $(function() {
 	$('#mymenu').mmenu({

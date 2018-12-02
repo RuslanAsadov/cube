@@ -45,6 +45,7 @@ b, strong
 .button
 	display: inline-block
 	border: 1px solid #9A977A
+	border-radius: 0
 	color: #fff
 	text-decoration: none
 	background-color: #C9C3B3
@@ -90,6 +91,7 @@ a:focus, button:focus, input:focus
 	left: 2%
 	top: 2%
 	z-index: 10
+	padding: 0
 	.ham
 		.line
 			stroke: $accent
@@ -100,7 +102,35 @@ a:focus, button:focus, input:focus
 	height: 100vh
 	width: 100%
 
-#loader-cnt
+.scrolltop
+	position: fixed
+	right: -100px
+	bottom: 5%
+	height: 50px
+	width: 50px
+	border-radius: 50%
+	background-color: #C0C0C0
+	opacity: 0.5
+	z-index: 50
+	margin: 0
+	padding: 0
+	border: 0
+	transition: all .5s ease
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	outline: none
+	.fa
+		color: #000000
+		font-size: 24px
+	&:hover, &:focus
+		opacity: 1
+		box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.13)
+	&.active
+		right: 5%
+
+#preloader
 	z-index: 100
 	position: fixed
 	top: 0
@@ -119,7 +149,7 @@ a:focus, button:focus, input:focus
 	height: 100px
 	z-index: 10
 
-.load hr
+.load span
 	border: 0
 	margin: 0
 	width: 40%
@@ -184,7 +214,7 @@ a:focus, button:focus, input:focus
 	width: 100%
 	display: flex
 	align-items: center
-	padding: 0 5%
+	padding: 0 8%
 	padding-top: 100px
 	.header-item__logo
 		display: block
@@ -285,7 +315,7 @@ a:focus, button:focus, input:focus
 			font-weight: normal
 		.section-description
 			font-size: 16px
-			line-height: 20px
+			line-height: 18px
 			margin: 0
 			font-family: lekton-regular, sans-serif
 
@@ -327,7 +357,7 @@ a:focus, button:focus, input:focus
 	font-size: 14px
 	margin: 0
 	margin-top: 5px
-	line-height: 20px
+	line-height: 16px
 
 //people-about
 
@@ -414,7 +444,7 @@ a:focus, button:focus, input:focus
 		.procces-text
 			max-width: 255px
 			font-size: 14px
-			line-height: 18px
+			line-height: 16px
 			margin: 0
 		&:hover
 			.process-icon
@@ -724,6 +754,7 @@ a:focus, button:focus, input:focus
 	color: #646250
 	text-transform: uppercase
 	font-family: lekton-regular, sans-serif
+	line-height: 1.3
 
 .footer-form
 	display: flex
@@ -731,6 +762,7 @@ a:focus, button:focus, input:focus
 	align-items: center
 	.footer-input
 		border: 0
+		border-radius: 0
 		border-bottom: 1px solid #646250
 		background: transparent
 		margin-bottom: 25px
